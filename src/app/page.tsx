@@ -9,7 +9,6 @@ export default function Home() {
     <>
       <Menu />
       <CmsSection />
-      <div className="h-[100vh] p-4">Home</div>
       <ZoomImage />
       <Section content={<Article />} />
     </>
