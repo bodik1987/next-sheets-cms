@@ -1,24 +1,30 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
 import ButtonUp from "./components/ui/button-up";
 import ProgressScroll from "./components/ui/progress-scroll";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const geistSans = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Next 15 12/24",
+  title: "Next 15 01/25",
   description: "Bohdan Shulika",
+  keywords: ["Next 15", "Frontend", "Bohdan Shulika"],
+  openGraph: {
+    siteName: "Next 15 01/25",
+    title: "Next 15 01/25",
+    description: "Bohdan Shulika",
+    url: "https://avtokonder.vercel.app/",
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#DC2626",
 };
 
 export default function RootLayout({
@@ -29,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
+        className={`${geistSans.variable} font-[family-name:var(--font-inter)] antialiased flex flex-col min-h-screen`}
       >
         <Header />
         <ButtonUp />
