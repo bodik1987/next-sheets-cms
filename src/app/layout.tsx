@@ -1,10 +1,11 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import ButtonUp from "./components/ui/button-up";
 import ProgressScroll from "./components/ui/progress-scroll";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import "./globals.css";
+import ThemeColor from "./components/ui/theme-color";
 
 const geistSans = Inter({
   variable: "--font-inter",
@@ -23,10 +24,6 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {
-  themeColor: "#DC2626",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,6 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <ThemeColor />
       <body
         className={`${geistSans.variable} font-[family-name:var(--font-inter)] antialiased flex flex-col min-h-screen`}
       >
