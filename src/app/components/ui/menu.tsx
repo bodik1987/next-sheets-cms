@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 const menu = {
   open: {
@@ -47,33 +48,47 @@ export default function Menu() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="relative w-[280px] p-4">
-      <motion.button
-        variants={button}
-        animate={isActive ? "open" : "closed"}
-        onClick={() => setIsActive(!isActive)}
-        className="w-10 h-10 bg-red-600 rounded-full absolute z-10"
-      ></motion.button>
-      <motion.div
-        className="bg-gray-200 dark:bg-[#0D0D0D] rounded-3xl relative select-none overflow-hidden"
-        variants={menu}
-        animate={isActive ? "open" : "closed"}
-        initial="closed"
-      >
-        <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
-      </motion.div>
-    </div>
+    <section className="max-w-5xl mx-auto w-full">
+      <div className="relative w-[280px] p-4">
+        <motion.button
+          variants={button}
+          animate={isActive ? "open" : "closed"}
+          onClick={() => setIsActive(!isActive)}
+          className="w-10 h-10 bg-red-600 rounded-full absolute z-10"
+        ></motion.button>
+        <motion.div
+          className="bg-gray-200 dark:bg-[#0D0D0D] rounded-3xl relative select-none overflow-hidden"
+          variants={menu}
+          animate={isActive ? "open" : "closed"}
+          initial="closed"
+        >
+          <AnimatePresence>{isActive && <Nav />}</AnimatePresence>
+        </motion.div>
+      </div>
+    </section>
   );
 }
 
 export const links = [
   {
-    title: "Projects",
-    href: "/",
+    title: "Автокондер",
+    href: "https://avtokonder.vercel.app/",
   },
   {
-    title: "Agency",
-    href: "/",
+    title: "Калькулятор калорий PWA",
+    href: "https://bodik-ttccc.vercel.app/",
+  },
+  {
+    title: "Лендинг Juiceplusolena",
+    href: "https://juiceplusolena.vercel.app/",
+  },
+  {
+    title: "Klimatyzacja",
+    href: "https://autofresh.vercel.app/",
+  },
+  {
+    title: "Каталог шрифтов",
+    href: "https://bodikfonts.vercel.app/",
   },
 ];
 
@@ -124,19 +139,20 @@ function Nav() {
     <div className="p-8">
       <div className="flex flex-col gap-4">
         {links.map((link, i) => {
-          const { title } = link;
+          const { title, href } = link;
           return (
-            <motion.a
+            <motion.span
               key={`b_${i}`}
-              href={"#"}
               custom={i}
               variants={perspective}
               initial="initial"
               animate="enter"
               exit="exit"
             >
-              {title}
-            </motion.a>
+              <Link target="_blank" href={href}>
+                {title}
+              </Link>
+            </motion.span>
           );
         })}
       </div>

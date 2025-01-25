@@ -38,7 +38,7 @@ const Header = () => {
       >
         <section className="wrapper flex justify-between items-center text-[min(4vw,20px)]">
           <Link href="/" className="inline-flex gap-2 items-center">
-            Назва
+            Bohdan Shulika
           </Link>
 
           <nav className="space-x-2 md:space-x-6 flex items-center">
