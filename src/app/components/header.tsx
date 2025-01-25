@@ -8,7 +8,6 @@ import {
   useScroll,
 } from "framer-motion";
 import ThemeToggle from "./ui/theme-toggle";
-import Mask from "./ui/mask";
 
 const Header = () => {
   const [scrollUp, setScrollUp] = useState(true);
