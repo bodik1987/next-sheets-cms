@@ -20,7 +20,7 @@ export default function Card({
   description,
 }: Props) {
   return (
-    <article className="border rounded-lg overflow-hidden bg-white shadow flex">
+    <article className="border dark:border-neutral-800 rounded-lg overflow-hidden bg-white dark:bg-neutral-800 shadow flex">
       <div className="w-[200px] h-[200px] flex items-center justify-center flex-shrink-0">
         <Image
           className="w-full h-full bg-white object-cover"
