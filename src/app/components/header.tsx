@@ -8,6 +8,7 @@ import {
   useScroll,
 } from "framer-motion";
 import ThemeToggle from "./ui/theme-toggle";
+import Mask from "./ui/mask";
 
 const Header = () => {
   const [scrollUp, setScrollUp] = useState(true);
@@ -32,12 +33,20 @@ const Header = () => {
   return (
     <>
       <header
-        className={`p-4 bg-gray-300/50 dark:bg-white/5 border-b border-b-gray-50/30 backdrop-blur-xl sticky top-0 transition-all z-30 ${
-          !scrollUp && "-translate-y-[110%]"
-        }`}
+        className={`p-4 sticky top-0 inset-x-0 px-4 h-24 bg-white/50 dark:bg-transparent
+      [background-image:radial-gradient(transparent_1px,rgb(255,255,255)_2px)]
+      dark:[background-image:radial-gradient(transparent_1px,rgb(0,0,0)_2px)]
+      [background-size:5px_5px] [backdrop-filter:blur(6px)]
+      [mask:linear-gradient(rgb(255,255,255)_50%,rgba(255,255,255,0)_100%)] 
+      dark:[mask:linear-gradient(rgb(30,30,30)_70%,rgba(30,30,30,0)_100%)] opacity-100 transition-all z-30 ${
+        !scrollUp && "-translate-y-[110%]"
+      }`}
       >
         <section className="wrapper flex justify-between items-center text-[min(4vw,20px)]">
-          <Link href="/" className="inline-flex gap-2 items-center">
+          <Link
+            href="/"
+            className="inline-flex gap-2 items-center font-semibold"
+          >
             Bohdan Shulika
           </Link>
 
