@@ -39,7 +39,7 @@ export async function submitFeedback(
     });
 
     return { message: "Спасибо за ваш отзыв!" };
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Ошибка при отправке данных:", error);
     return {
       message: "Произошла ошибка при отправке отзыва. Попробуйте позже.",
