@@ -34,10 +34,10 @@ export const PrivateKey = ({ setContent }: ContentProps) => {
             <p className="font-medium">Keep your private key safe</p>
           </div>
           <div className="flex items-center gap-4 text-neutral-500 text-sm">
-            <p className="font-medium">Don't share it with anyone else</p>
+            <p className="font-medium">Dont share it with anyone else</p>
           </div>
           <div className="flex items-center gap-4 text-neutral-500 text-sm">
-            <p className="font-medium">If you lose it, we can't recover it</p>
+            <p className="font-medium">If you lose it, we cant recover it</p>
           </div>
         </div>
         <div className="flex gap-4 w-full">
@@ -65,10 +65,10 @@ export const RecoveryPhrase = ({ setContent }: ContentProps) => {
             <p className="font-medium">Keep your Secret Phrase safe</p>
           </div>
           <div className="flex items-center gap-4 text-neutral-500 text-sm">
-            <p className="font-medium">Don't share it with anyone else</p>
+            <p className="font-medium">Dont share it with anyone else</p>
           </div>
           <div className="flex items-center gap-4 text-neutral-500 text-sm">
-            <p className="font-medium">If you lose it, we can't recover it</p>
+            <p className="font-medium">If you lose it, we cant recover it</p>
           </div>
         </div>
         <div className="flex gap-4 w-full">
@@ -86,9 +86,9 @@ export const RemoveWallet = ({ setContent }: ContentProps) => {
       <div className="flex flex-col gap-3">
         <h1 className="font-medium text-xl">Are you sure?</h1>
         <p className="text-neutral-500">
-          You haven't backed up your wallet yet. If you remove it, you could
-          lose access forever. We suggest tapping and backing up your wallet
-          first with a valid recovery method.
+          You havent backed up your wallet yet. If you remove it, you could lose
+          access forever. We suggest tapping and backing up your wallet first
+          with a valid recovery method.
         </p>
       </div>
       <div>
