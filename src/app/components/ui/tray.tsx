@@ -84,15 +84,6 @@ export default function Tray() {
                 }
               }}
             >
-              <div className="flex justify-between items-center pb-6 border-b-[1px] border-neutral-100">
-                <h1 className="font-medium text-lg">Title</h1>
-                <button
-                  className="bg-gray-100 p-1 rounded-full"
-                  onClick={close}
-                >
-                  X
-                </button>
-              </div>
               <button className="my-3 mx-auto flex justify-center">
                 <motion.div
                   className="h-2 w-14 cursor-grab active:cursor-grabbing touch-none bg-gray-200"
@@ -102,6 +93,16 @@ export default function Tray() {
                   onPointerDown={(e) => controls.start(e)}
                 />
               </button>
+
+              <div className="flex justify-between items-center pb-6 border-b-[1px] border-neutral-100">
+                <h1 className="font-medium text-lg">Title</h1>
+                <button
+                  className="bg-gray-100 p-1 rounded-full"
+                  onClick={close}
+                >
+                  X
+                </button>
+              </div>
               <motion.div
                 key={content}
                 layout="position"
