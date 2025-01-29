@@ -48,7 +48,7 @@ export default function Tray() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="absolute inset-0 bg-black/20 z-10 select-none"
+            className="fixed inset-0 bg-black/20 z-10 select-none"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -56,7 +56,7 @@ export default function Tray() {
           >
             <motion.div
               onClick={(e) => e.stopPropagation()}
-              className="absolute bottom-4 inset-x-0 mx-auto w-[22rem] min-h-10 bg-neutral-50 px-6 pb-6 overflow-hidden z-20"
+              className="fixed bottom-4 inset-x-0 mx-auto w-[22rem] min-h-10 bg-neutral-50 px-6 pb-6 overflow-hidden z-20"
               style={{ borderRadius: 28, y: dragY }}
               initial={{ y: 336, scale: 0.6 }}
               animate={{ y: 0, scale: 1 }}
