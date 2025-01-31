@@ -76,7 +76,7 @@ export const links = [
   },
   {
     title: "Калькулятор калорий PWA",
-    href: "https://bodik-ttccc.vercel.app/",
+    href: "https://bodik-calories.vercel.app/",
   },
   {
     title: "Лендинг Juiceplusolena",
